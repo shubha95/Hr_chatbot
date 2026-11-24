@@ -6,7 +6,7 @@ from langchain_core.output_parsers import StrOutputParser
 from src.config import (
     CHROMA_DB_PATH,
     CHROMA_COLLECTION_NAME,
-    get_chat_model,
+    get_llm,
     get_embedding_model,
 )
 
@@ -55,7 +55,7 @@ def get_rag_chain():
     )
 
     # Load chat model
-    llm = get_chat_model()
+    llm = get_llm()
 
     # Build the RAG chain
     rag_chain = (
